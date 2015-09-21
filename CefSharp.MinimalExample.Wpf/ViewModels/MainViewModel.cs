@@ -23,9 +23,33 @@ namespace CefSharp.MinimalExample.Wpf.ViewModels
             set { PropertyChanged.ChangeAndNotify(ref title, value, () => Title); }
         }
 
+        private string addressBing;
+        public string AddressBing
+        {
+            get { return addressBing; }
+            set { PropertyChanged.ChangeAndNotify(ref addressBing, value, () => AddressBing); }
+        }
+
+        private string addressGoogle;
+        public string AddressGoogle
+        {
+            get { return addressGoogle; }
+            set { PropertyChanged.ChangeAndNotify(ref addressGoogle, value, () => AddressGoogle); }
+        }
+
+        private string addressLocal;
+        public string AddressLocal
+        {
+            get { return addressLocal; }
+            set { PropertyChanged.ChangeAndNotify(ref addressLocal, value, () => AddressLocal); }
+        }
+
         public MainViewModel()
         {
             PropertyChanged += OnPropertyChanged;
+            AddressBing = "https://www.bing.com";
+            AddressGoogle = "http://www.google.com";
+            AddressLocal = "file:///C:/test/index.html";
         }
 
         private void OnPropertyChanged(object sender, PropertyChangedEventArgs e)

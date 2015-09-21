@@ -9,14 +9,85 @@
              d:DesignHeight="300">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition />
+            <RowDefinition Height="500" />
+            <RowDefinition Height="500"/>
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
+        
+        <!-- Test 1 -->
         <cefSharp:ChromiumWebBrowser Grid.Row="0"
-                          Address="http://www.google.com"
-                          WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
-                          Title="{Binding Title, Mode=TwoWay}" />
-        <StatusBar Grid.Row="1">
+                        Name="browserOne"
+                        Address="http://www.bing.com"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+        <cefSharp:ChromiumWebBrowser Grid.Row="1"
+                        Name="browserTwo"
+                        Address="http://www.google.com"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+
+        <!-- Test 2 -->
+        <!--<cefSharp:ChromiumWebBrowser Grid.Row="0"
+                        Name="browserOne"
+                        Address="{Binding AddressBing, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+        <cefSharp:ChromiumWebBrowser Grid.Row="1"
+                        Name="browserTwo"
+                        Address="{Binding AddressBing, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />-->
+
+        <!-- Test 3 -->
+        <!--<cefSharp:ChromiumWebBrowser Grid.Row="0"
+                        Name="browserOne"
+                        Address="{Binding AddressGoogle, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+        <cefSharp:ChromiumWebBrowser Grid.Row="1"
+                        Name="browserTwo"
+                        Address="{Binding AddressGoogle, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />-->
+        
+
+        <!-- Test 4 -->
+        <!--<cefSharp:ChromiumWebBrowser Grid.Row="0"
+                        Name="browserOne"
+                        Address="{Binding AddressBing, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+        <cefSharp:ChromiumWebBrowser Grid.Row="1"
+                        Name="browserTwo"
+                        Address="{Binding AddressGoogle, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />-->
+
+        <!-- Test 5 -->
+        <!--<cefSharp:ChromiumWebBrowser Grid.Row="0"
+                        Name="browserOne"
+                        Address="file:///C:/test/index.html"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+        <cefSharp:ChromiumWebBrowser Grid.Row="1"
+                        Name="browserTwo"
+                        Address="file:///C:/test/index.html"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />-->
+
+        <!-- Test 6 -->
+        <!--<cefSharp:ChromiumWebBrowser Grid.Row="0"
+                        Name="browserOne"
+                        Address="{Binding AddressLocal, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />
+        <cefSharp:ChromiumWebBrowser Grid.Row="1"
+                        Name="browserTwo"
+                        Address="{Binding AddressLocal, Mode=TwoWay}"
+                        WebBrowser="{Binding WebBrowser, Mode=OneWayToSource}"
+                        Title="{Binding Title, Mode=TwoWay}" />-->
+
+        <StatusBar Grid.Row="2">
             <ProgressBar HorizontalAlignment="Right"
                          IsIndeterminate="{Binding WebBrowser.IsLoading}"
                          Width="100"
